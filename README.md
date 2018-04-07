@@ -29,7 +29,7 @@ To run the script, run the following command from the project directory:
 bash create_lookup.sh OUTPUTFILE
 ```
 
-The `OUTPUTFILE` can be whatever name you choose.  
+The `OUTPUTFILE` can be whatever name you choose. A sample lookup table can be found [here](https://raw.githubusercontent.com/leunammejii/firehol_blocklist_lookup/master/sample_lookup_table.csv).  
 
 #### Destroy
 To remove the project completely,  run the following commands:  
