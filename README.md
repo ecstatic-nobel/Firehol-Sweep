@@ -2,7 +2,7 @@
 ##### Generate a CSV file containing possible malicious IP addresses using FireHOL's blocklist IP sets.  
 
 #### Description  
-Simply put, this gathers a list of possible malicious IP addresses using the dataset on [GitHub](https://github.com/firehol/blocklist-ipsets) gathered by [FireHOL](https://iplists.firehol.org/). This can be used in Splunk (or any other log aggregator) to sweep you environment or setup alerts when traffic is generated.  
+Simply put, this gathers a list of possible malicious IP addresses using the datasets on [GitHub](https://github.com/firehol/blocklist-ipsets) gathered by [FireHOL](https://iplists.firehol.org/). This can be used in Splunk (or any other log aggregator) to sweep you environment or setup alerts when traffic is detected.  
 
 
 #### Prerequisites  
@@ -16,22 +16,19 @@ git clone https://github.com/leunammejii/firehol_blocklist_lookup.git
 cd firehol_blocklist_lookup
 ```
 
-If you want to change the source of the IP sets:
+If you want to change the source of the IP sets:  
 - Navigate to [FireHOL's blocklist-ipset GitHub project](https://github.com/firehol/blocklist-ipsets)  
-- Select one of the sets  
-- Select the `Raw` option  
-- Copy the URL  
-- Paste the URL on a separate line in `firehol_ipsets.txt`  
+- Paste the name of the IP set on a separate line in `firehol_ipsets.txt`  
 
 #### Create the Lookup Table  
 To run the script, run the following command from the project directory:  
 ```bash
-bash create_lookup.sh OUTPUTFILE
+bash create_lookup.sh CLONEDIR OUTPUTFILE
 ```
 
-The `OUTPUTFILE` can be whatever name you choose. A sample lookup table can be found [here](https://raw.githubusercontent.com/leunammejii/firehol_blocklist_lookup/master/sample_lookup_table.csv).  
+The `CLONEDIR` is the directory where you want to clone the FireHOL blocklist-ipsets project. The `OUTPUTFILE` is the path to the new lookup table that will be generated. A sample lookup table can be found [here](https://raw.githubusercontent.com/leunammejii/firehol_blocklist_lookup/master/sample_lookup_table.csv).  
 
-#### Destroy
+#### Destroy  
 To remove the project completely,  run the following commands:  
 ```bash
 rm -rf firehol_blocklist_lookup
