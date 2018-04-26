@@ -8,6 +8,7 @@ Simply put, this gathers a list of possible malicious IP addresses using the dat
 #### Prerequisites  
 - Bash  
 - Curl  
+- Git  
 
 #### Setup  
 Open a terminal and run the following commands:  
