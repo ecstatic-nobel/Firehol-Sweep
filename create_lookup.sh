@@ -4,7 +4,7 @@
 # Usage:       bash create_lookup.sh OUTPUTFILE
 #
 
-IPSETS='firehol_ipsets.txt'
+IPSETS="firehol_ipsets.txt"
 CLONEDIR="$1/blocklist-ipsets"
 OUTPUTFILE="$2"
 
@@ -18,7 +18,7 @@ else
     git clone https://github.com/firehol/blocklist-ipsets.git "$CLONEDIR"
 fi
 
-echo 'ip_address,source' | tee "$OUTPUTFILE" > /dev/null
+echo "ip_address,source" | tee "$OUTPUTFILE" > /dev/null
 
 while read -r IPSET
 do
