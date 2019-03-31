@@ -1,4 +1,4 @@
-# [firehol_blocklist_lookup]  
+# [Firehol Blocklist LookupTable]  
 ##### Generate a CSV file containing possible malicious IP addresses using FireHOL's blocklist IP sets.  
 
 #### Description  
